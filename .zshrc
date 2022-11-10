@@ -102,7 +102,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# alias exa to ls
+alias ls='exa -a --group-directories-first' # Nuevo ls con opciones preferidas
+alias ld='exa -D --group-directories-first'  # Solo Folder
+alias ll='exa -l --header --group-directories-first' # Formato Largo
+alias lt='exa -aT --group-directories-first' # Mostar Dentro Folder
+alias l.='exa -a | egrep "^\."' # Solo ocultos
+alias li='exa -a --git-ignore --group-directories-first' # ignorar archivos de .gitignore
+alias lg='exa -al --header --git --group-directories-first' # Formato Largo mas Git data
+alias lp='exa -al --header --octal-permissions --group-directories-first' # Formato Largo mas Permisos en octal
+# alias git workspace
+alias cdw="cd ~/Workspace"
 alias v=openNvim
 function openNvim {
   if [ $# -eq 0 ]; then
